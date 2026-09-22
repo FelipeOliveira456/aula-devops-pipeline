@@ -28,6 +28,14 @@ jobs:
         with:
           python-version: '3.13' 
       - run: python scripts/soma.py
+      - uses: pavelzw/pytest-action@v2
+        with:
+          verbose: true
+          emoji: true
+          job-summary: true
+          custom-arguments: '-q'
+          click-to-expand: true
+          report-title: 'Test Report'
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
