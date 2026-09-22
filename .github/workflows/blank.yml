@@ -32,7 +32,7 @@ jobs:
       - name: Install and run pytest
         run: pip install pytest pytest-md-report pytest-emoji
       - name: Run tests
-        run: pytest -q
+        run: PYTHONPATH=. pytest -q
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
