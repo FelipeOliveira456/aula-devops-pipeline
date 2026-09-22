@@ -29,16 +29,10 @@ jobs:
           python-version: '3.13' 
       - run: python scripts/soma.py
       
-      - name: Install pytest
+      - name: Install and run pytest
         run: pip install pytest pytest-md-report pytest-emoji
-
-      - uses: pavelzw/pytest-action@v2
-        with:
-          verbose: true
-          emoji: true
-          job-summary: true
-          custom-arguments: '-q'
-          click-to-expand: true
+      - name: Run tests
+        run: pytest -q
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
