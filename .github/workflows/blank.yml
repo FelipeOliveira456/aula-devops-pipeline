@@ -28,6 +28,9 @@ jobs:
         with:
           python-version: '3.13' 
       - run: python scripts/soma.py
+      
+      - name: Install pytest
+        run: pip install pytest
       - uses: pavelzw/pytest-action@v2
         with:
           verbose: true
