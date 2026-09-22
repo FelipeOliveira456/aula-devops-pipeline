@@ -39,7 +39,6 @@ jobs:
           job-summary: true
           custom-arguments: '-q'
           click-to-expand: true
-          report-title: 'Test Report'
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
